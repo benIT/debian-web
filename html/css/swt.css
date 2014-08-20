@@ -1,0 +1,21 @@
+a {
+	color: #004693;
+}
+a:hover {
+	color: #004693;
+}
+
+.navbar-header {
+	font-size: 120%;
+	font-weight: bold;
+	margin: 4px
+}
+
+.navbar-header img {
+	width: auto;
+	height: 50px;
+}
+
+.navbar-header a {
+	color: black;
+}
