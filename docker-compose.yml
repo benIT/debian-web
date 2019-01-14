@@ -1,0 +1,30 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    container_name: pgsql
+    environment:
+      - foo=foo
+      - bar=bar
+    volumes:
+      - ./sql/:/opt/sql
+      - ./sql/init-db.sh:/docker-entrypoint-initdb.d/init-db.sh
+  web:
+#  replaced image with build for development
+#    image: benit/debian-web
+    build:
+      context: .
+      args:
+        - http_proxy
+        - https_proxy
+        - no_proxy
+    container_name: web
+    depends_on:
+      - db
+    ports:
+      - 80:80
+    volumes:
+      - ./html:/var/www/html
+#volumes:
+#  webdata1:
+#    driver: local
