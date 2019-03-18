@@ -16,7 +16,7 @@ This repo is sample dockerfile based on debian.
 
 build latest version:
 
-	docker build -t benit/debian-web . --build-arg http_proxy=$http_proxy
+	docker build -t benit/debian-web . --build-arg http_proxy --build-arg https_proxy
 	
 or tag it: 
 
