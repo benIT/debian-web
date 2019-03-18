@@ -8,7 +8,7 @@ This repo is sample dockerfile based on debian.
 
 * Debian
 * Apache
-* PHP 7.0
+* PHP
 
 ## Usage
 
