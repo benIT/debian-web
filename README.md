@@ -20,7 +20,7 @@ build latest version:
 	
 or tag it: 
 
-	docker build -t benit/debian-web . --build-arg http_proxy=$http_proxy --tag benit/debian-web:1.0.0
+	docker build -t benit/debian-web . --build-arg http_proxy --build-arg https_proxy --build-arg GIT_CONFIG_FILE="$(cat ~/.gitconfig)"  --tag benit/debian-web:php5.6
 	
 
 ### Run
