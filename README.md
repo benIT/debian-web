@@ -4,11 +4,20 @@
 
 This repo is sample dockerfile based on debian.
 
+## Get image
+
+Image is available at [dockerhub](https://cloud.docker.com/repository/docker/benit/debian-web)
+
+Get it with:
+
+    docker pull benit/debian-web:php7.1
+
 ## Content
 
 * Debian
 * Apache
 * PHP
+* Frontend stuffs
 
 ## Usage
 
@@ -22,11 +31,9 @@ or tag it:
 
 	docker build -t benit/debian-web . --build-arg http_proxy --build-arg https_proxy --build-arg GIT_CONFIG_FILE="$(cat ~/.gitconfig)"  --tag benit/debian-web:php5.6
 	
-
 ### Run
 
-	docker run --name debian-web --rm -p 8080:80 -d benit/debian-web:latest
-	
+	docker run --name debian-web --rm -p 8080:80 -p 443:443 -d benit/debian-web:latest
 	
 ### Attach a shell
 
