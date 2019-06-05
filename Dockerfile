@@ -13,7 +13,8 @@ RUN apt-get install -y vim curl wget zip unzip make
 RUN wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 RUN sh -c 'echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list'
 RUN apt update
-RUN apt-get install -y apache2 php7.1 php7.1-dev libapache2-mod-php7.1 php7.1-cli php7.1-common php7.1-curl php7.1-gd php7.1-geoip php7.1-gmp php7.1-imap php7.1-intl php7.1-json php7.1-mbstring php7.1-mcrypt php7.1-memcached php7.1-msgpack php7.1-mysql php7.1-opcache php7.1-pgsql php7.1-soap php7.1-sqlite3 php7.1-xml php7.1-xmlrpc php7.1-zip
+RUN apt-get install -y apache2 php7.1 php7.1-dev libapache2-mod-php7.1 php7.1-cli php7.1-common php7.1-ldap php7.1-curl php7.1-gd php7.1-geoip php7.1-gmp php7.1-imap php7.1-intl php7.1-json php7.1-mbstring php7.1-mcrypt php7.1-memcached php7.1-msgpack php7.1-mysql php7.1-opcache php7.1-pgsql php7.1-soap php7.1-sqlite3 php7.1-xml php7.1-xmlrpc php7.1-zip
+RUN a2enmod rewrite
 
 #install git
 RUN apt-get install -y git
